@@ -47,7 +47,7 @@ exports.findAll = (req, res) => {
 // Editando um post unico
 exports.update = (req, res) => {
     // Validate Request
-    if(!req.body.content) {
+    if(!req.body.descricao) {
         return res.status(400).send({
             message: "Conteudo não pode estar vazio"
         });
@@ -56,7 +56,7 @@ exports.update = (req, res) => {
     // Encontrando o post e editando
     Post.findByIdAndUpdate(req.params.id, {
         titulo: req.body.titulo || "Post sem nome",
-        content: req.body.content
+        descricao: req.body.descricao
     }, {new: true})
     .then(post => {
         if(!post) {
