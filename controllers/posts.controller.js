@@ -44,6 +44,27 @@ exports.findAll = (req, res) => {
     });
 };
 
+exports.findOne = (req, res) => {
+    Post.findById(req.params.id)
+    .then(post => {
+        if(!post) {
+            return res.status(404).send({
+                message: "Post não encontrado " + req.params.id
+            });
+        }
+        res.send(device);
+    }).catch(err => {
+        if(err.kind === 'ObjectId') {
+            return res.status(404).send({
+                message: "Post não encontrado " + req.params.id
+            });
+        }
+        return res.status(500).send({
+            message: "Erro pegando post " + req.params.id
+        });
+    });
+};
+
 // Editando um post unico
 exports.update = (req, res) => {
     // Validate Request

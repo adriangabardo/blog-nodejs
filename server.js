@@ -40,8 +40,12 @@ app.get('/todos', posts.findAll)
 // Para criar um post novo
 app.post('/novo', posts.create)
 
+// Pegando um unico post
+app.get('/editar/:id', posts.findOne)
+
 // Editando um unico post
 app.put('/editar/:id', posts.update)
+
 
 // Apagando um post
 app.delete('/apagar/:id', posts.delete)
