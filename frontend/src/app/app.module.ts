@@ -9,13 +9,15 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { TodosPostsComponent } from './todos-posts/todos-posts.component';
 import { PostComponent } from './post/post.component';
 import { ServicoPostsService } from './servico-posts.service';
+import { NovoPostComponent } from './novo-post/novo-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     TodosPostsComponent,
-    PostComponent
+    PostComponent,
+    NovoPostComponent
   ],
   imports: [
     BrowserModule,
