@@ -11,6 +11,7 @@ import { PostComponent } from './post/post.component';
 import { ServicoPostsService } from './servico-posts.service';
 import { NovoPostComponent } from './novo-post/novo-post.component';
 import { EditarPostComponent } from './editar-post/editar-post.component';
+import { DeletarPostComponent } from './deletar-post/deletar-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditarPostComponent } from './editar-post/editar-post.component';
     TodosPostsComponent,
     PostComponent,
     NovoPostComponent,
-    EditarPostComponent
+    EditarPostComponent,
+    DeletarPostComponent
   ],
   imports: [
     BrowserModule,

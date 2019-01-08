@@ -16,7 +16,6 @@ export class TodosPostsComponent implements OnInit {
     //Pegar os posts do serviço
     this.servicoPostsService.todosPosts().subscribe(posts => {
       this.posts = posts;
-      console.log(posts);
     })
 
   }

@@ -17,7 +17,6 @@ export class PostComponent implements OnInit {
   funcaoPegarPost(id) {
     this.api.pegarPost(id)
       .subscribe(data => {
-        console.log(data);
         this.post = data;
       });
   }

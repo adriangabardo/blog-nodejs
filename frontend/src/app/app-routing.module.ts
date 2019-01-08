@@ -5,6 +5,7 @@ import { PostComponent } from './post/post.component';
 import { TodosPostsComponent } from './todos-posts/todos-posts.component';
 import { NovoPostComponent } from './novo-post/novo-post.component';
 import { EditarPostComponent } from './editar-post/editar-post.component';
+import { DeletarPostComponent } from './deletar-post/deletar-post.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: 'deletar/:id',
-    component: PostComponent
+    component: DeletarPostComponent
   }
 ];
 
