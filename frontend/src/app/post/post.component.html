@@ -1,3 +1,19 @@
-<p>
-  post works!
-</p>
+<section class="section">
+  <div class="container-fluid postPage">
+    <div class="container-fluid" id="postContainer">
+      <h2 class="is-size-2 titulo">{{post.titulo}}</h2>
+      <p class="descricao">{{post.descricao}}</p>
+      <footer class="footer">
+        <div class="content has-text-left">
+          <p>
+            <a class="button" href="./editar/{{post._id}}">Editar</a>
+            <a class="button" href="./deletar/{{post._id}}">Deletar</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+    <div class="container postImage">
+      <img src="https://images.unsplash.com/photo-1546872681-4ec53f618462?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80" />
+    </div>
+  </div>
+</section>

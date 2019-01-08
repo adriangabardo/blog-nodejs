@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostComponent } from './post/post.component';
 import { TodosPostsComponent } from './todos-posts/todos-posts.component';
 import { NovoPostComponent } from './novo-post/novo-post.component';
+import { EditarPostComponent } from './editar-post/editar-post.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: TodosPostsComponent
+    component: PostComponent
   },
   {
     path: 'novo',
@@ -25,7 +26,7 @@ const routes: Routes = [
   },
   {
     path: 'editar/:id',
-    component: PostComponent
+    component: EditarPostComponent
   },
   {
     path: 'deletar/:id',

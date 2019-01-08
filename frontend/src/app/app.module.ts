@@ -10,6 +10,7 @@ import { TodosPostsComponent } from './todos-posts/todos-posts.component';
 import { PostComponent } from './post/post.component';
 import { ServicoPostsService } from './servico-posts.service';
 import { NovoPostComponent } from './novo-post/novo-post.component';
+import { EditarPostComponent } from './editar-post/editar-post.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NovoPostComponent } from './novo-post/novo-post.component';
     NavComponent,
     TodosPostsComponent,
     PostComponent,
-    NovoPostComponent
+    NovoPostComponent,
+    EditarPostComponent
   ],
   imports: [
     BrowserModule,
