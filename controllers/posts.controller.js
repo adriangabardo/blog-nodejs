@@ -37,6 +37,7 @@ exports.findAll = (req, res) => {
     Post.find()
     .then(post => {
         res.send(post);
+        console.log(post)
     }).catch(err => {
         res.status(500).send({
             message: err.message || "Ocorreu um erro ao buscar os posts."
@@ -52,7 +53,7 @@ exports.findOne = (req, res) => {
                 message: "Post não encontrado " + req.params.id
             });
         }
-        res.send(device);
+        res.send(post);
     }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
