@@ -18,12 +18,13 @@ const routes: Routes = [
     component: TodosPostsComponent
   },
   {
-    path: ':id',
+    path: 'post/:id',
     component: PostComponent
   },
   {
     path: 'novo',
-    component: NovoPostComponent
+    component: NovoPostComponent,
+    pathMatch: 'full'
   },
   {
     path: 'editar/:id',
