@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicoPostsService } from '../servico-posts.service';
+
 
 @Component({
   selector: 'app-novo-post',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoPostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api: ServicoPostsService) {  }
+
+  post = []
+
+  funcaoSalvarPost(post) {
+    this.api.novoPost(post)
+      .subscribe(data => {
+        console.log(data);
+      });
+      //console.log(post)
+  }
 
   ngOnInit() {
   }

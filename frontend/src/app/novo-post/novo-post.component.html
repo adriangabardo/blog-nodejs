@@ -1,3 +1,27 @@
-<p>
-  hi
-</p>
+<div class="container">
+  <div class="notification">
+    Criar um novo post para o blog.
+  </div>
+  <form (ngSubmit)="funcaoSalvarPost(postForm.value)" #postForm="ngForm">
+    <div class="field">
+      <label class="label">Titulo</label>
+      <div class="control">
+        <input class="input" type="text" [(ngModel)]="titulo" placeholder="Titulo do seu post" name="titulo">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Texto</label>
+      <div class="control">
+        <textarea class="textarea" [(ngModel)]="descricao" placeholder="Texto do seu post" name="descricao"></textarea>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <input class="button is-link" type="submit" value="Postar">
+      </div>
+      <div class="control">
+        <button class="button is-text">Cancelar</button>
+      </div>
+    </div>
+  </form>
+</div>
